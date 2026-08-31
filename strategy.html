@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Стратегия сайта и СТЗ — Эталон Пласт</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#1A2230; --muted:#566174; --line:#E6E9EF; --soft:#F5F7FA;
+    --gold:#E0A100; --gold-d:#B07e00; --blue:#0E63B3; --graph:#13202E;
+    --green:#2F7A4F; --red:#D8232A;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',sans-serif;color:var(--ink);background:#fff;line-height:1.7;font-size:16px}
+  .page{max-width:880px;margin:0 auto;padding:56px 56px 90px}
+  h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.2}
+  h1{font-size:40px;font-weight:800}
+  h2{font-size:27px;font-weight:700;margin:54px 0 14px;padding-top:18px;border-top:3px solid var(--ink)}
+  h3{font-size:20px;font-weight:700;margin:28px 0 8px;font-family:'Manrope';}
+  h4{font-size:16px;font-weight:800;margin:18px 0 6px;font-family:'Manrope';color:var(--graph)}
+  p{margin:10px 0;color:#2c3645}
+  ul,ol{margin:10px 0 10px 22px}li{margin:6px 0;color:#2c3645}
+  strong{color:var(--ink)}
+  a{color:var(--blue)}
+  .lead{font-size:18px;color:var(--muted)}
+  .tag{display:inline-block;font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;font-weight:800;color:var(--gold-d);background:#FBF3DD;padding:4px 12px;border-radius:20px}
+  .cover{border-bottom:1px solid var(--line);padding-bottom:34px;margin-bottom:10px}
+  .cover .meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;font-size:13.5px;color:var(--muted)}
+  .cover .meta b{color:var(--ink)}
+  .logo{height:40px;margin-bottom:24px}
+  .callout{background:var(--soft);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0}
+  .callout.blue{border-color:var(--blue)}
+  .callout.green{border-color:var(--green)}
+  .callout.red{border-color:var(--red)}
+  .callout h4{margin-top:0}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+  th{background:var(--graph);color:#fff;font-weight:700;font-size:12.5px;text-transform:uppercase;letter-spacing:.3px}
+  tr:nth-child(even) td{background:var(--soft)}
+  .pill{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:6px;background:#EAF2FB;color:var(--blue)}
+  .pill.g{background:#E7F5ED;color:var(--green)}.pill.y{background:#FBF3DD;color:var(--gold-d)}.pill.r{background:#FBE9EA;color:var(--red)}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:16px 0}
+  .box{border:1px solid var(--line);border-radius:12px;padding:18px}
+  .box h4{margin-top:0}
+  .toc{background:var(--soft);border-radius:12px;padding:22px 26px;margin:26px 0}
+  .toc ol{margin-left:18px}.toc a{color:var(--ink);text-decoration:none;font-weight:600}
+  .toc a:hover{color:var(--blue)}
+  .kpi{font-weight:800;color:var(--green)}
+  .src{font-size:13px;color:var(--muted)}
+  hr{border:none;border-top:1px solid var(--line);margin:30px 0}
+  @media print{.page{padding:0}h2{break-after:avoid}table,.box,.callout{break-inside:avoid}}
+  @media(max-width:680px){.page{padding:28px 20px}h1{font-size:30px}.grid3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="cover">
+    <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR4AAABJCAYAAADrNUktAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA61pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcFJpZ2h0czpNYXJrZWQ9IkZhbHNlIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InV1aWQ6ODMwREYwRkMwOTU1REIxMTgxNkI5N0QxRUVCNTY1MkMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUU1Mjk0NTk5RDk1MTFFNUJFODM5MzZEREQ0QjQ2MkIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUU1Mjk0NTg5RDk1MTFFNUJFODM5MzZEREQ0QjQ2MkIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MEZEQzFFOTBGRTRGRTIxMUEyMDlDOEJDRDc1MEIwRDAiIHN0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" alt="Эталон Пласт" />
+    <span class="tag">Стратегия · Исследование · СТЗ</span>
+    <h1>Сайт «Эталон&nbsp;Пласт» как система продаж</h1>
+    <p class="lead">Многостраничник под три направления (B2B&nbsp;/ конечный клиент&nbsp;/ поставка без монтажа) с SEO-продвижением, конверсионными воронками и связкой с соцсетями.</p>
+    <div class="meta">
+      <span><b>Заказчик:</b> Эталон Пласт, Воронеж</span>
+      <span><b>Дата:</b> 16.06.2026</span>
+      <span><b>Статус:</b> черновик v1 для согласования</span>
+    </div>
+  </div>
+
+  <div class="toc">
+    <b>Содержание</b>
+    <ol>
+      <li><a href="#s1">Резюме: что и зачем строим</a></li>
+      <li><a href="#s2">Исходная ситуация</a></li>
+      <li><a href="#s3">Три направления и их аудитории</a></li>
+      <li><a href="#s4">Мультивизуал под точку входа</a></li>
+      <li><a href="#s5">Архитектура многостраничника</a></li>
+      <li><a href="#s6">SEO-стратегия и семантика</a></li>
+      <li><a href="#s7">Воронки и продающие тексты</a></li>
+      <li><a href="#s8">Дизайн и 3 варианта стиля</a></li>
+      <li><a href="#s9">Соцсети и B2B-блок</a></li>
+      <li><a href="#s10">Аналитика и KPI</a></li>
+      <li><a href="#s11">Техническая реализация</a></li>
+      <li><a href="#s12">Дорожная карта</a></li>
+      <li><a href="#s13">Источники</a></li>
+    </ol>
+  </div>
+
+  <h2 id="s1">1. Резюме: что и зачем строим</h2>
+  <p>Текущий сайт — устаревший одностраничник 2014–2015 годов: формы только имитируют отправку, нет аналитики, дизайн не отражает уровень компании и не сегментирует трафик. При этом у «Эталон&nbsp;Пласт» уже сильный фундамент: опыт с 2008&nbsp;года, 10&nbsp;000+ клиентов, 300+ объектов. Сайт этот потенциал не продаёт.</p>
+  <p>Задача — превратить сайт в <strong>систему привлечения и квалификации заявок</strong>, а не «визитку». Сайт рассматривается как часть проекта роста продаж: SEO даёт стабильный бесплатный трафик, конверсионные воронки превращают его в заявки, соцсети усиливают доверие и охват, отдельный B2B-блок открывает оптовый и дилерский канал.</p>
+  <div class="callout">
+    <h4>Ключевая идея</h4>
+    <p>Один сайт показывает «разное лицо» под три бизнес-направления и под конкретный поисковый запрос. Человек, искавший «окна под ключ Воронеж», и прораб, искавший «окна ПВХ оптом», должны попадать на по-разному оформленные и по-разному аргументированные страницы. Это и есть <strong>мультилендинг / гиперсегментация трафика</strong> — инструмент, который повышает конверсию на <span class="kpi">30–150%</span>.</p>
+  </div>
+
+  <h2 id="s2">2. Исходная ситуация</h2>
+  <table>
+    <tr><th>Что есть сейчас</th><th>Проблема</th><th>Что меняем</th></tr>
+    <tr><td>Одностраничный сайт</td><td>Нельзя продвигать в SEO по разным запросам, нет посадочных под сегменты</td><td>Многостраничник с кластерами под каждое направление</td></tr>
+    <tr><td>Формы «имитируют» отправку</td><td>Заявки теряются, нет фиксации лидов</td><td>Реальная отправка в CRM/Telegram + квиз-воронка</td></tr>
+    <tr><td>Нет Яндекс.Метрики (ID 34204765 не подключён)</td><td>Решения принимаются вслепую</td><td>Метрика + цели + коллтрекинг + сквозная аналитика</td></tr>
+    <tr><td>Устаревший дизайн, тяжёлый jQuery</td><td>Низкое доверие, медленная загрузка, плохая мобильная версия</td><td>Современный адаптив, скорость &lt;2 c, мобайл-фёрст</td></tr>
+    <tr><td>Один оффер на всех</td><td>B2B, конечник и «без монтажа» получают одно сообщение</td><td>Сегментация офферов и визуала под 3 направления</td></tr>
+  </table>
+
+  <h2 id="s3">3. Три направления и их аудитории</h2>
+  <p>Бизнес работает в трёх плоскостях, и у каждой — своя аудитория, боль, оффер и метрика. Это основа всей структуры сайта.</p>
+
+  <h3>3.1. Конечный клиент «под ключ» <span class="pill g">B2C</span></h3>
+  <table>
+    <tr><th>Аудитория</th><th>Боли</th><th>Оффер</th><th>KPI</th></tr>
+    <tr><td>Жители Воронежа и области: квартиры, частные дома, дачи</td><td>Холод, шум, конденсат; страх переплатить и нарваться на брак</td><td>Под ключ с замером, монтажом по ГОСТ, рассрочкой 0% и гарантией</td><td>Заявка на замер, стоимость лида, конверсия квиза</td></tr>
+  </table>
+
+  <h3>3.2. Дилеры, прорабы, бригады <span class="pill">B2B</span></h3>
+  <table>
+    <tr><th>Аудитория</th><th>Боли</th><th>Оффер</th><th>KPI</th></tr>
+    <tr><td>Монтажные бригады, прорабы, небольшие оконные фирмы-перепродавцы</td><td>Нужна стабильная цена, сроки, отсрочка, надёжный поставщик «без сюрпризов»</td><td>Дилерские цены по объёму, личный кабинет, выделенный менеджер, бонусы за объём</td><td>Заявка на прайс, регистрация дилера, повторные заказы</td></tr>
+  </table>
+
+  <h3>3.3. Поставка без монтажа <span class="pill y">опт/розница</span></h3>
+  <table>
+    <tr><th>Аудитория</th><th>Боли</th><th>Оффер</th><th>KPI</th></tr>
+    <tr><td>Те, кто ставит сам или своей бригадой; стройки, ремонтные бригады</td><td>Хотят только качественные изделия по размерам, без наценки за монтаж</td><td>Изделия по размерам, самовывоз или доставка, монтаж — на стороне клиента</td><td>Заявка на расчёт изделий, средний чек, доля повторных</td></tr>
+  </table>
+
+  <h2 id="s4">4. Мультивизуал под точку входа</h2>
+  <p>Главный запрос заказчика: <em>«в зависимости от перехода на сайт открывается разный визуал — B2B, без монтажа, под ключ, прорабам/дилерам»</em>. Это реализуется двумя слоями.</p>
+
+  <h3>Слой 1. Отдельные посадочные ветки (SEO-страницы)</h3>
+  <p>Под каждое направление — свой раздел с собственным URL, заголовками, фото и аргументацией. Их индексирует поиск, на них ведёт реклама. Это «жёсткая» сегментация (см. карту страниц в разделе&nbsp;5).</p>
+
+  <h3>Слой 2. Динамическая подмена контента (мультилендинг)</h3>
+  <p>Внутри ветки заголовок, оффер и фото подменяются под конкретный ключ/объявление через UTM-метки и параметры. Пример: по запросу «пластиковые окна на балкон Воронеж» в H1 подставляется именно «Остекление балконов в Воронеже», а не общий заголовок.</p>
+  <div class="callout blue">
+    <h4>Почему это работает</h4>
+    <p>Когда пользователь видит в заголовке ровно то, что искал, он чувствует «я попал по адресу». По данным рынка, корректно настроенный мультилендинг повышает конверсию в лид на <span class="kpi">30–150%</span>, а в отдельных кейсах подмена заголовка под фразу из объявления поднимала конверсию <span class="kpi">в 4,5 раза</span>.</p>
+  </div>
+  <table>
+    <tr><th>Точка входа (запрос/канал)</th><th>Ветка</th><th>Подменяемый оффер и визуал</th></tr>
+    <tr><td>«окна под ключ Воронеж», «пластиковые окна цена»</td><td>B2C под ключ</td><td>Тёплый, «домашний» визуал (Вариант&nbsp;1), акцент на замер/рассрочку/гарантию</td></tr>
+    <tr><td>«окна ПВХ оптом Воронеж», «купить окна оптом», «стать дилером»</td><td>B2B / дилерам</td><td>Строгий промышленный визуал (Вариант&nbsp;3), прайс, объёмы, сроки</td></tr>
+    <tr><td>«окна без установки», «окна по размерам самовывоз»</td><td>Без монтажа</td><td>Калькулятор изделий, условия доставки/самовывоза</td></tr>
+    <tr><td>«окна прорабам», «скидка монтажникам»</td><td>Прорабам</td><td>Бонусная программа, спеццены за объём</td></tr>
+    <tr><td>Реклама / акции / массовый трафик</td><td>Любая + промо</td><td>Яркий конверсионный визуал (Вариант&nbsp;2): квиз, таймер, акция</td></tr>
+  </table>
+
+  <h2 id="s5">5. Архитектура многостраничника</h2>
+  <p>Структура строится по принципу «раздел = кластер запросов = посадочная страница». Это и логично для пользователя, и правильно для SEO.</p>
+  <h3>Карта страниц (sitemap)</h3>
+  <table>
+    <tr><th>Раздел</th><th>Страницы</th><th>Назначение</th></tr>
+    <tr><td>Главная</td><td>/</td><td>Хаб: коротко обо всём + развилка на 3 направления</td></tr>
+    <tr><td>Под ключ (B2C)</td><td>/okna, /balkony, /zagorodnye-doma, /tseny</td><td>Продуктовые посадочные для населения</td></tr>
+    <tr><td>Опт и дилерам (B2B)</td><td>/optom, /dileram, /prorabam, /lichnyy-kabinet</td><td>Опт, дилерская программа, кабинет</td></tr>
+    <tr><td>Без монтажа</td><td>/bez-montazha, /okna-po-razmeram, /dostavka</td><td>Поставка изделий, расчёт, логистика</td></tr>
+    <tr><td>Доверие</td><td>/o-kompanii, /proizvodstvo, /sertifikaty, /otzyvy, /raboty</td><td>Факторы доверия, кейсы, портфолио</td></tr>
+    <tr><td>Контент/SEO</td><td>/blog + статьи под вопросы клиентов</td><td>Трафик по информационным запросам</td></tr>
+    <tr><td>Сервис</td><td>/garantiya, /rassrochka, /kontakty</td><td>Условия, гарантия, контакты</td></tr>
+  </table>
+  <div class="callout">
+    <h4>Перелинковка</h4>
+    <p>Каждая продуктовая страница ссылается на «доверие» (отзывы, о компании, сертификаты) и на профильную форму/квиз. Блог ведёт на коммерческие страницы по теме (статья «почему потеют окна» → страница энергосберегающих стеклопакетов).</p>
+  </div>
+
+  <h2 id="s6">6. SEO-стратегия и семантика</h2>
+  <p>Сайт компании, работающей в одном городе, продвигает прежде всего <strong>локацию</strong>. Клиенты ищут не «окна», а «окна в Воронеже», «установка окон рядом со мной». Без локальной оптимизации компания теряет до 70–80% потенциальных заявок.</p>
+
+  <h3>6.1. Кластеры семантического ядра</h3>
+  <table>
+    <tr><th>Кластер</th><th>Примеры запросов</th><th>Страница</th></tr>
+    <tr><td>Коммерческие гео</td><td>пластиковые окна Воронеж, купить окна Воронеж цена</td><td>/okna</td></tr>
+    <tr><td>Балконы</td><td>остекление балкона Воронеж, отделка лоджии под ключ</td><td>/balkony</td></tr>
+    <tr><td>Загородные</td><td>окна для дома, окна с ламинацией под дерево</td><td>/zagorodnye-doma</td></tr>
+    <tr><td>Нишевые</td><td>энергосберегающие стеклопакеты, тёплые окна с аргоном, шумоизоляция</td><td>статьи + /okna</td></tr>
+    <tr><td>B2B/опт</td><td>окна ПВХ оптом, окна оптом Воронеж, стать дилером окон</td><td>/optom, /dileram</td></tr>
+    <tr><td>Без монтажа</td><td>окна без установки, окна по размерам, окна самовывоз</td><td>/bez-montazha</td></tr>
+    <tr><td>Вопросы (инфо)</td><td>почему потеют окна, как выбрать стеклопакет, 2 или 3 стекла</td><td>/blog</td></tr>
+    <tr><td>Сравнения</td><td>какой профиль лучше, 58 мм или 70 мм, тёплый профиль</td><td>/blog</td></tr>
+  </table>
+  <p class="src">Сбор: Яндекс.Wordstat + подсказки → чистка → кластеризация по интенту → маппинг кластер→страница. Кейс из практики: компания сгруппировала 237 запросов в 8 кластеров под отдельные страницы и за 5 месяцев получила +142% трафика и +89% заявок.</p>
+
+  <h3>6.2. Локальное SEO (Воронеж)</h3>
+  <ul>
+    <li>Заполнить <strong>Яндекс.Бизнес</strong> и <strong>2ГИС</strong>: адрес (Ленинский пр-т, 20/1), телефоны, часы, 10–20 живых фото (офис, монтаж, команда, объекты).</li>
+    <li>Единые NAP-данные (название/адрес/телефон) на сайте и во всех картах.</li>
+    <li>Системно собирать отзывы и отвечать на них.</li>
+  </ul>
+  <div class="callout green">
+    <h4>Кейс по Воронежу</h4>
+    <p>Оконная компания из Воронежа за 3 месяца нарастила отзывы с 12 до 87, поднялась в Яндексе по «окна в Воронеже» с 8-го на 2-е место и получила <span class="kpi">+140% заявок</span>. Это прямой ориентир для «Эталон&nbsp;Пласт».</p>
+  </div>
+
+  <h3>6.3. Контент по этапам пути клиента</h3>
+  <table>
+    <tr><th>Этап</th><th>Запрос клиента</th><th>Контент</th></tr>
+    <tr><td>Осознание</td><td>«чем 3-камерный профиль отличается от 2-камерного»</td><td>Объясняющая статья + инфографика</td></tr>
+    <tr><td>Рассмотрение</td><td>«как выбрать окна для холодного дома»</td><td>Гайд с выбором по параметрам</td></tr>
+    <tr><td>Решение</td><td>«где купить окна в Воронеже с гарантией»</td><td>Коммерческая страница + кейсы</td></tr>
+    <tr><td>Лояльность</td><td>«как ухаживать за окнами»</td><td>Сервисная статья, удержание</td></tr>
+  </table>
+
+  <h3>6.4. Техническое SEO (обязательный минимум)</h3>
+  <ul>
+    <li>Скорость загрузки <strong>&lt; 2&nbsp;секунд</strong>, мобайл-фёрст, SSL (https).</li>
+    <li>Корректная иерархия H1–H3, без дублей URL, человекопонятные адреса.</li>
+    <li>Оптимизация изображений (200–300&nbsp;КБ без потери качества), современные форматы.</li>
+    <li>Микроразметка schema.org (Organization, LocalBusiness, Product, Review, FAQ).</li>
+    <li>Никакого тяжёлого устаревшего JS/Flash и медленных слайдеров.</li>
+  </ul>
+
+  <h2 id="s7">7. Воронки и продающие тексты</h2>
+  <h3>7.1. Структура продающей страницы</h3>
+  <p>Каркас по модели <strong>PAS</strong> (Проблема → Усиление → Решение), усиленный доказательствами:</p>
+  <ol>
+    <li><strong>Первый экран:</strong> сегментный заголовок + оффер + 1 целевое действие (квиз/замер).</li>
+    <li><strong>Боль:</strong> холод, шум, конденсат, страх брака и переплаты.</li>
+    <li><strong>Решение и выгоды:</strong> что получает клиент (а не свойства профиля).</li>
+    <li><strong>Доказательства:</strong> цифры (2008, 10&nbsp;000+, 300+), отзывы с именами и фото, кейсы, сертификаты.</li>
+    <li><strong>Снятие возражений:</strong> рассрочка 0%, гарантия, монтаж по ГОСТ, уборка после.</li>
+    <li><strong>Финальный CTA</strong> + форма с минимумом полей.</li>
+  </ol>
+
+  <h3>7.2. Квиз-калькулятор — ядро воронки</h3>
+  <div class="callout blue">
+    <p>Квиз («Рассчитайте стоимость за 1 минуту») вовлекает в диалог и греет лид. На лендингах он поднимает конверсию <span class="kpi">минимум в 2 раза</span>. Пример воронки: вопрос за вопросом → контакт в обмен на расчёт и скидку.</p>
+  </div>
+  <p><strong>Пример шагов квиза для B2C:</strong> сколько окон → тип (квартира/дом/балкон) → срочность → контакт → «расчёт + скидка 5%».<br>
+  <strong>Для B2B:</strong> тип партнёра (дилер/прораб/опт) → ориентир объёма в месяц → регион → контакт → «прайс + персональные условия».</p>
+
+  <h3>7.3. Лестница офферов и микроконверсии</h3>
+  <ul>
+    <li><strong>Лёгкий вход:</strong> «рассчитать за минуту», «получить прайс», «узнать цену» — без обязательств.</li>
+    <li><strong>Лид-магниты:</strong> чек-лист «как принять окна у монтажников», гайд «как выбрать профиль», PDF-прайс для B2B.</li>
+    <li><strong>Догрев:</strong> онлайн-чат/мессенджер, обратный звонок за 10 минут.</li>
+  </ul>
+
+  <h3>7.4. Примеры заголовков под направления</h3>
+  <table>
+    <tr><th>Направление</th><th>Заголовок (H1)</th><th>Подзаголовок</th></tr>
+    <tr><td>Под ключ</td><td>Тёплые окна для вашего дома в Воронеже</td><td>Замер бесплатно · монтаж по ГОСТ · рассрочка 0%</td></tr>
+    <tr><td>B2B / дилерам</td><td>ПВХ-окна оптом и без монтажа в Воронеже</td><td>Дилерские цены · условия по объёму · отсрочка по договору</td></tr>
+    <tr><td>Без монтажа</td><td>Окна по вашим размерам — без установки</td><td>Изготовим и отдадим готовые изделия · самовывоз или доставка</td></tr>
+    <tr><td>Прорабам</td><td>Спеццены для прорабов и монтажных бригад</td><td>Бонусы за объём · стабильное качество · быстрый просчёт</td></tr>
+  </table>
+
+  <h2 id="s8">8. Дизайн и 3 варианта стиля</h2>
+  <p>Фирменный знак — логотип «ЭТАЛОН» (жёлто-оранжевый) + «ПЛАСТ» (тёмно-серый). Это и задаёт палитру: <strong>золото/охра + графит + белый</strong>. Реальный логотип используется во всех макетах (в прошлой версии он был ошибочно заменён — исправлено).</p>
+  <h3>Требования к визуалу</h3>
+  <ul>
+    <li><strong>Свои фото</strong>, а не стоки: монтаж, объекты, «до/после», команда, офис/склад. Это и доверие, и польза для SEO.</li>
+    <li>Крупные качественные изображения, «воздух», читаемая типографика, заметные но не агрессивные CTA.</li>
+    <li>Адаптив под мобильные (большинство заходов с телефона), скорость, доступность.</li>
+  </ul>
+  <h3>Три варианта на выбор (приложены отдельными файлами)</h3>
+  <div class="grid3">
+    <div class="box"><h4>Вариант 1 — Премиум</h4><p>Светлый, воздушный, акцент на качестве и доверии. Для конечного клиента «под ключ».</p><p class="src">variant-1-premium.html</p></div>
+    <div class="box"><h4>Вариант 2 — Конверсионный</h4><p>Яркий, с квизом, акциями и таймером. Под рекламу и массовый трафик.</p><p class="src">variant-2-conversion.html</p></div>
+    <div class="box"><h4>Вариант 3 — B2B / Производство</h4><p>Строгий промышленный стиль: прайсы, объёмы, сертификаты. Для дилеров и опта.</p><p class="src">variant-3-b2b.html</p></div>
+  </div>
+  <div class="callout">
+    <p>Рекомендация: не выбирать «один на всё», а <strong>смешать</strong> — базовый стиль сайта на основе Варианта&nbsp;1 (доверие), B2B-раздел в стиле Варианта&nbsp;3, а конверсионные приёмы Варианта&nbsp;2 (квиз, акции) использовать на рекламных посадочных.</p>
+  </div>
+
+  <h2 id="s9">9. Соцсети и B2B-блок</h2>
+  <h3>9.1. Соцсети как усилитель</h3>
+  <p>Живые группы повышают доверие, дают трафик и социальные сигналы для SEO.</p>
+  <ul>
+    <li><strong>ВКонтакте</strong> — основная площадка: фото/видео монтажа, «до/после», отзывы, конкурсы.</li>
+    <li><strong>Telegram-канал</strong> — полезные посты, акции, быстрый контакт (уже есть боты в проекте — можно связать заявки с сайта).</li>
+    <li><strong>Rutube/VK Видео</strong> — обзоры «какие окна выбрать», процесс замера и монтажа.</li>
+    <li>Единые хэштеги: #окнаВоронеж, #пластиковыеокна, #остеклениебалкона.</li>
+  </ul>
+
+  <h3>9.2. B2B-блок (дилеры/опт)</h3>
+  <ul>
+    <li><strong>Лендинг «Дилерам/Прорабам»:</strong> условия, скидки по объёму, сроки, доставка, форма заявки на прайс.</li>
+    <li><strong>Личный кабинет:</strong> актуальные цены и остатки, оформление и статусы заказов, отсрочка, история. Цифровизация B2B-заказов ускоряет обработку на ~35%.</li>
+    <li><strong>Интеграции:</strong> синхронизация с учётной системой (Firebird/1С), CRM, выделенный менеджер на дилера.</li>
+  </ul>
+
+  <h2 id="s10">10. Аналитика и KPI</h2>
+  <ul>
+    <li>Подключить <strong>Яндекс.Метрику</strong> (ID 34204765 уже есть, но не активен) + Вебмастер.</li>
+    <li>Настроить <strong>цели:</strong> отправка квиза, заявка на замер, клик по телефону, запрос прайса, регистрация дилера.</li>
+    <li><strong>Коллтрекинг</strong> (на старом сайте был задел под Comagic) — связать звонки с источником.</li>
+    <li>Сквозная аналитика: источник → заявка → сделка, чтобы считать стоимость лида и ROI по каналам.</li>
+  </ul>
+  <table>
+    <tr><th>Метрика</th><th>Ориентир</th></tr>
+    <tr><td>Скорость загрузки</td><td>&lt; 2 секунд</td></tr>
+    <tr><td>Конверсия посадочной в заявку</td><td>от 3–5% (с квизом — выше)</td></tr>
+    <tr><td>Рост органического трафика</td><td>первые результаты 2–4 мес., стабильно 6–8 мес.</td></tr>
+    <tr><td>Доля заявок с органики</td><td>растущая, цель — снизить зависимость от рекламы</td></tr>
+  </table>
+
+  <h2 id="s11">11. Техническая реализация</h2>
+  <table>
+    <tr><th>Блок</th><th>Рекомендация</th></tr>
+    <tr><td>Контентный сайт (SEO)</td><td>Статический генератор (Astro — уже есть задел в проекте): быстрый, SEO-дружелюбный, легко наполнять</td></tr>
+    <tr><td>Формы и заявки</td><td>Реальная отправка в CRM + дублирование в Telegram-бот (инфраструктура ботов в проекте уже есть)</td></tr>
+    <tr><td>Квиз</td><td>Свой лёгкий квиз или внешний конструктор; обязательно с сохранением частичных ответов</td></tr>
+    <tr><td>B2B-кабинет</td><td>Отдельный модуль с авторизацией и интеграцией с учётной системой</td></tr>
+    <tr><td>Мультилендинг</td><td>Подмена H1/оффера/фото по UTM-параметрам</td></tr>
+    <tr><td>Хостинг</td><td>SSL, CDN для статики, бэкапы</td></tr>
+  </table>
+
+  <h2 id="s12">12. Дорожная карта</h2>
+  <table>
+    <tr><th>Этап</th><th>Содержание</th><th>Результат</th></tr>
+    <tr><td><span class="pill g">Этап 1 — MVP</span></td><td>Главная + 3 продуктовые посадочные (под ключ, B2B, без монтажа), реальные формы + квиз, Метрика, базовое локальное SEO</td><td>Сайт собирает заявки и трафик</td></tr>
+    <tr><td><span class="pill y">Этап 2 — Контент и SEO</span></td><td>Блог, статьи под кластеры, отзывы, портфолио, сертификаты, фото объектов; Яндекс.Бизнес + 2ГИС</td><td>Рост органики и доверия</td></tr>
+    <tr><td><span class="pill">Этап 3 — B2B и соцсети</span></td><td>Личный кабинет дилера, прайс-PDF, интеграция с учётной системой; запуск ВК/Telegram</td><td>Оптовый канал и охват</td></tr>
+    <tr><td><span class="pill r">Этап 4 — Оптимизация</span></td><td>Мультилендинг, A/B-тесты офферов, сквозная аналитика, докрутка конверсии</td><td>Снижение стоимости лида</td></tr>
+  </table>
+
+  <h2 id="s13">13. Источники</h2>
+  <ul class="src">
+    <li>SEO продвижение оконной компании 2026 (кейсы, локальное SEO, контент) — seohead.pro</li>
+    <li>Особенности продвижения сайта оконной компании — vc.ru/seo</li>
+    <li>Мультилендинг и динамическая подмена контента (конверсия +30–150%) — sendpulse.com, timeweb.com, callibri.ru</li>
+    <li>Триггеры доверия на сайте — convertmonster.ru, web-c.ru</li>
+    <li>Квиз-воронки и рост конверсии ×2 — marquiz.ru</li>
+    <li>Дилерские программы производителей окон — rusokna.ru, sofos.ru, oknaprosvet.ru</li>
+    <li>Тренды веб-дизайна 2026 — contented.ru, weblium.com</li>
+    <li>Контент старого сайта и фирменный стиль — D:\etalon_ai\old_cite</li>
+  </ul>
+
+  <hr>
+  <p class="src">Документ подготовлен 16.06.2026 для компании «Эталон Пласт». Черновик v1 — дополняется после выбора варианта дизайна и согласования приоритетов.</p>
+
+</div>
+</body>
+</html>

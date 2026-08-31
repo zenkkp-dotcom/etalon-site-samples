@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Контент-наполнение сайта — Эталон Пласт</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{--ink:#1A2230;--mut:#566174;--line:#E6E9EF;--soft:#F5F7FA;--gold:#E0A100;--gold-d:#B07e00;--blue:#0E63B3;--graph:#13202E;--green:#2F7A4F;--red:#D8232A}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',sans-serif;color:var(--ink);background:#fff;line-height:1.7;font-size:16px}
+  .page{max-width:900px;margin:0 auto;padding:54px 56px 90px}
+  h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.2}
+  h1{font-size:38px;font-weight:800}
+  h2{font-size:25px;font-weight:700;margin:48px 0 6px;padding-top:18px;border-top:3px solid var(--ink)}
+  .purpose{font-size:14px;color:var(--mut);margin-bottom:14px}
+  h3{font-size:18px;font-weight:700;font-family:'Manrope';margin:24px 0 6px;color:var(--graph)}
+  h4{font-size:14px;font-weight:800;font-family:'Manrope';margin:16px 0 4px;text-transform:uppercase;letter-spacing:.4px;color:var(--gold-d)}
+  p{margin:8px 0}
+  ul{margin:8px 0 8px 22px}li{margin:5px 0}
+  strong{color:var(--ink)}
+  .lead{font-size:18px;color:var(--mut)}
+  .tag{display:inline-block;font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;font-weight:800;color:#fff;background:var(--graph);padding:4px 12px;border-radius:20px;margin-right:6px}
+  .tag.b2c{background:var(--green)}.tag.b2b{background:var(--blue)}.tag.bez{background:var(--gold-d)}.tag.trust{background:var(--graph)}
+  .cover{border-bottom:1px solid var(--line);padding-bottom:30px;margin-bottom:8px}
+  .logo{height:38px;margin-bottom:22px}
+  .h1block{background:var(--soft);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:12px 18px;margin:10px 0}
+  .h1block .lbl{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--gold-d)}
+  .h1block .t{font-size:22px;font-weight:800;font-family:'Playfair Display',serif}
+  .cta{display:inline-block;background:var(--red);color:#fff;font-weight:700;padding:8px 16px;border-radius:8px;font-size:14px;margin:6px 0}
+  .seo{background:#EEF4FB;border:1px solid #D7E6F5;border-radius:10px;padding:12px 16px;margin:14px 0;font-size:13.5px}
+  .seo b{color:var(--blue)}
+  .need{background:#FFF6E6;border:1px dashed var(--gold);border-radius:10px;padding:6px 12px;font-size:13.5px;color:#7a5a00;display:inline-block;margin:4px 0}
+  .toc{background:var(--soft);border-radius:12px;padding:20px 24px;margin:24px 0}
+  .toc a{color:var(--ink);text-decoration:none;font-weight:600}.toc a:hover{color:var(--blue)}
+  .toc ol{margin-left:18px}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+  th{background:var(--graph);color:#fff;font-size:12.5px;text-transform:uppercase}
+  tr:nth-child(even) td{background:var(--soft)}
+  hr{border:none;border-top:1px solid var(--line);margin:14px 0}
+  @media print{.page{padding:0}h2{break-after:avoid}}
+  @media(max-width:680px){.page{padding:26px 18px}h1{font-size:28px}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="cover">
+    <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR4AAABJCAYAAADrNUktAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA61pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcFJpZ2h0czpNYXJrZWQ9IkZhbHNlIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InV1aWQ6ODMwREYwRkMwOTU1REIxMTgxNkI5N0QxRUVCNTY1MkMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUU1Mjk0NTk5RDk1MTFFNUJFODM5MzZEREQ0QjQ2MkIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUU1Mjk0NTg5RDk1MTFFNUJFODM5MzZEREQ0QjQ2MkIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MEZEQzFFOTBGRTRGRTIxMUEyMDlDOEJDRDc1MEIwRDAiIHN0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" alt="Эталон Пласт" />
+    <span class="tag">Контент · наполнение</span>
+    <h1>Тексты и наполнение сайта «Эталон Пласт»</h1>
+    <p class="lead">Готовые продающие тексты по страницам под три направления: под ключ (B2C), опт и дилерам (B2B), поставка без монтажа. Факты — только подтверждённые; где нужны ваши данные — помечено <span class="need">⚑ нужны ваши данные</span>.</p>
+    <p class="purpose" style="margin-top:14px"><strong>Подтверждённые факты</strong> (из старого сайта): Воронеж, работаем с 2008&nbsp;г.; 10&nbsp;000+ семей; 300+ объектов; Воронежская и Липецкая области; продажа и установка окон + поставка без монтажа (дилер/монтажник, не производитель); замер бесплатно; рассрочка 0% до 200&nbsp;000&nbsp;₽ на 6 мес.; монтаж по ГОСТ 30971-2012; ламинация под дерево; остекление балконов и загородных домов. Тел.: 8&nbsp;(473)&nbsp;261-25-95, 261-25-96; адрес: Ленинский пр-т, 20/1; e-mail: admin@окна-в-воронеже.рф.</p>
+  </div>
+
+  <div class="toc">
+    <b>Страницы</b>
+    <ol>
+      <li><a href="#p0">Сквозные элементы (шапка, футер, формы, квиз)</a></li>
+      <li><a href="#p1">Главная</a></li>
+      <li><a href="#p2">Пластиковые окна под ключ (B2C)</a></li>
+      <li><a href="#p3">Остекление балконов и лоджий</a></li>
+      <li><a href="#p4">Окна для загородного дома</a></li>
+      <li><a href="#p5">Опт и дилерам (B2B)</a></li>
+      <li><a href="#p6">Прорабам и монтажным бригадам</a></li>
+      <li><a href="#p7">Окна без монтажа (поставка)</a></li>
+      <li><a href="#p8">О компании</a></li>
+      <li><a href="#p9">Рассрочка и оплата · Гарантия</a></li>
+      <li><a href="#p10">Отзывы · Наши работы · Контакты</a></li>
+      <li><a href="#p11">Блог: темы и пример статьи</a></li>
+    </ol>
+  </div>
+
+  <h2 id="p0">0. Сквозные элементы</h2>
+  <h3>Шапка</h3>
+  <p>Логотип · меню (Окна · Балконы · Опт и дилерам · Без монтажа · Работы · Контакты) · телефон <strong>8 (473) 261-25-95</strong> · кнопка <span class="cta">Рассчитать стоимость</span></p>
+  <h3>Подвал (футер)</h3>
+  <p>Телефоны: 8 (473) 261-25-95, 261-25-96 · E-mail: admin@окна-в-воронеже.рф · Адрес: г. Воронеж, Ленинский проспект, 20/1 · «Эталон Пласт» — пластиковые окна в Воронеже с 2008 года · ссылки на ВКонтакте и Telegram · © Эталон Пласт.</p>
+  <h3>Формы (микрокопия)</h3>
+  <ul>
+    <li><strong>Заголовок:</strong> «Рассчитаем стоимость бесплатно» · «Перезвоним за 10 минут».</li>
+    <li><strong>Поля:</strong> Имя · Телефон. (Минимум полей — выше конверсия.)</li>
+    <li><strong>Кнопка:</strong> «Жду звонка» / «Рассчитать бесплатно».</li>
+    <li><strong>После отправки:</strong> «✓ Заявка принята! Перезвоним вам в ближайшее время.»</li>
+    <li><strong>Согласие:</strong> «Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.»</li>
+  </ul>
+  <h3>Квиз-калькулятор (общий каркас, 4–5 шагов)</h3>
+  <ol>
+    <li>Что остекляем? — Квартира / Частный дом / Балкон-лоджия / Опт (без монтажа)</li>
+    <li>Сколько окон / проёмов? — 1 / 2 / 3 / 4 и больше</li>
+    <li>На каком этапе? — Только узнаю цену / Планирую в этом месяце / Нужно срочно</li>
+    <li>Нужен ли монтаж? — Под ключ с монтажом / Только изделия (без монтажа)</li>
+    <li>Куда отправить расчёт? — Имя + Телефон → «Получить расчёт и скидку 5%»</li>
+  </ol>
+  <p class="need">⚑ нужны ваши данные: реальный размер скидки/бонуса за прохождение квиза, актуальные сроки.</p>
+
+  <h2 id="p1">1. Главная <span class="tag trust">хаб</span></h2>
+  <p class="purpose">Цель: за 5 секунд показать, кто вы и кому, и развести три аудитории по их разделам.</p>
+  <div class="h1block"><div class="lbl">H1</div><div class="t">Пластиковые окна в Воронеже — под ключ и оптом</div></div>
+  <p><strong>Подзаголовок:</strong> Производим монтаж по ГОСТ, поставляем изделия без установки, работаем с дилерами и прорабами. С 2008 года нам доверили окна более 10 000 семей Воронежа, Воронежской и Липецкой областей.</p>
+  <p><span class="cta">Рассчитать стоимость</span> &nbsp; <span class="cta" style="background:#fff;color:var(--red);border:1px solid var(--red)">Позвонить</span></p>
+  <h4>Блок «Выберите своё»</h4>
+  <p>Три карточки-развилки:</p>
+  <ul>
+    <li><strong>Себе в квартиру или дом</strong> — окна и балконы под ключ с замером и монтажом. → /okna</li>
+    <li><strong>Опт и дилерам</strong> — выгодные цены по объёму, условия для постоянных партнёров. → /optom</li>
+    <li><strong>Без монтажа</strong> — готовые окна по вашим размерам, ставите сами. → /bez-montazha</li>
+  </ul>
+  <h4>Цифры доверия</h4>
+  <p>с 2008 года · 10 000+ семей · 300+ объектов · рассрочка 0%</p>
+  <h4>Почему мы (7 преимуществ — из старого сайта)</h4>
+  <p>Энергосберегающие стёкла · Защита от шума · Надёжная теплоизоляция · Экологичные материалы · Монтаж по ГОСТ 30971-2012 · Фурнитура известных брендов · Широкий выбор цветов и ламинация под дерево.</p>
+  <h4>Что входит (комплектация)</h4>
+  <p>Отлив · подоконник · откосы · москитная сетка · ламинация · раскладка · витражи.</p>
+  <h4>Блоки далее</h4>
+  <p>Замер бесплатно + Рассрочка 0% · Конфигуратор окна · Отзывы жителей Воронежа · Наши работы · Финальная форма.</p>
+  <div class="seo"><b>SEO title:</b> Пластиковые окна в Воронеже — купить от компании Эталон Пласт<br><b>Description:</b> Пластиковые окна в Воронеже под ключ и оптом с 2008 года. Бесплатный замер, рассрочка 0%, монтаж по ГОСТ. Поставка без монтажа дилерам и прорабам. ☎ 8 (473) 261-25-95</div>
+
+  <h2 id="p2">2. Пластиковые окна под ключ <span class="tag b2c">B2C</span></h2>
+  <p class="purpose">Цель: заявка на замер от частного клиента. Структура PAS + доказательства.</p>
+  <div class="h1block"><div class="lbl">H1</div><div class="t">Пластиковые окна под ключ в Воронеже</div></div>
+  <p><strong>Подзаголовок:</strong> Замер, изготовление, доставка и монтаж по ГОСТ — берём весь процесс на себя. Бесплатный выезд замерщика и рассрочка 0%.</p>
+  <h4>Боль клиента</h4>
+  <p>Старые окна дуют, потеют и пропускают шум, а счёт за отопление растёт. Менять страшно: легко переплатить или нарваться на кривой монтаж, после которого окно «ведёт».</p>
+  <h4>Решение</h4>
+  <p>Мы отвечаем за результат целиком: инженер-замерщик бесплатно приедет и точно рассчитает конструкцию под ваш проём, мы подберём профиль и стеклопакет под вашу задачу (тепло / тишина / цена), а монтажная бригада установит окно строго по ГОСТ, уберёт за собой и оформит документы.</p>
+  <h4>Что вы получаете</h4>
+  <ul>
+    <li>Тёплые энергосберегающие стеклопакеты — меньше платить за отопление.</li>
+    <li>Тишину — многокамерный профиль гасит уличный шум.</li>
+    <li>Любой цвет и ламинацию под дерево — окна украшают интерьер и фасад.</li>
+    <li>Полную комплектацию: отлив, подоконник, откосы, москитная сетка.</li>
+  </ul>
+  <h4>Снятие возражений</h4>
+  <p>Замер — бесплатно. Рассрочка — 0% до 200 000 ₽ на 6 месяцев. Монтаж — по ГОСТ 30971-2012. Уборка после установки и вывоз старых окон. Гарантия — <span class="need">⚑ срок уточнить</span>.</p>
+  <p class="need">⚑ нужны ваши данные: какие профильные системы продаёте (напр. KBE/VEKA/иное), от какой цены/за м² начинается окно, срок изготовления и монтажа, срок гарантии.</p>
+  <p><span class="cta">Вызвать замерщика бесплатно</span></p>
+  <div class="seo"><b>SEO title:</b> Пластиковые окна под ключ в Воронеже — цена, замер бесплатно<br><b>Description:</b> Установка пластиковых окон под ключ в Воронеже: бесплатный замер, монтаж по ГОСТ, рассрочка 0%. Энергосбережение и шумоизоляция. ☎ 8 (473) 261-25-95</div>
+
+  <h2 id="p3">3. Остекление балконов и лоджий <span class="tag b2c">B2C</span></h2>
+  <div class="h1block"><div class="lbl">H1</div><div class="t">Остекление и отделка балконов и лоджий в Воронеже</div></div>
+  <p><strong>Подзаголовок:</strong> Превратим балкон из склада в тёплую комнату. Остекление, утепление и отделка под ключ — внутри и снаружи.</p>
+  <h4>Текст (из старого сайта, доработан)</h4>
+  <p>Раньше балконы использовали как склад ненужных вещей. Сегодня балкон или лоджия — это полноценные дополнительные метры: кабинет, зона отдыха, место для цветов. Наши специалисты выполнят остекление, утепление и отделку как внутри, так и снаружи. Самый выгодный вариант — <strong>отделка балкона под ключ</strong>: один подрядчик, один срок, один результат.</p>
+  <h4>Варианты</h4>
+  <ul>
+    <li>Холодное остекление — лёгкое, для защиты от осадков и пыли.</li>
+    <li>Тёплое остекление — для полноценной комнаты круглый год.</li>
+    <li>Отделка под ключ — обшивка, утепление, пол, освещение. <span class="need">⚑ что именно делаете — уточнить</span>.</li>
+  </ul>
+  <p><span class="cta">Рассчитать остекление балкона</span></p>
+  <div class="seo"><b>SEO title:</b> Остекление балконов и лоджий в Воронеже под ключ — цена<br><b>Description:</b> Остекление, утепление и отделка балконов и лоджий в Воронеже под ключ. Тёплое и холодное остекление, бесплатный замер, рассрочка 0%. ☎ 8 (473) 261-25-95</div>
+
+  <h2 id="p4">4. Окна для загородного дома <span class="tag b2c">B2C</span></h2>
+  <div class="h1block"><div class="lbl">H1</div><div class="t">Окна для загородного дома и дачи в Воронеже</div></div>
+  <p><strong>Подзаголовок:</strong> Окна с ламинацией под дерево, которые украсят дом и прослужат десятилетия.</p>
+  <h4>Текст</h4>
+  <p>Всё больше времени мы проводим за городом — в своём доме или на даче. Для загородного дома окна решают сразу две задачи: держать тепло в холодное время и красиво выглядеть. Мы предлагаем изготовление и установку окон с <strong>ламинацией под дерево</strong> — десятки текстур и оттенков, от натурального дуба до золотого ореха. Запишитесь на бесплатную консультацию, чтобы подобрать решение и узнать цену.</p>
+  <p><span class="cta">Консультация по окнам для дома</span></p>
+  <div class="seo"><b>SEO title:</b> Окна для загородного дома в Воронеже — ламинация под дерево<br><b>Description:</b> Пластиковые окна для загородного дома и дачи в Воронеже: ламинация под дерево, тёплые стеклопакеты, монтаж по ГОСТ. Бесплатный замер. ☎ 8 (473) 261-25-95</div>
+
+  <h2 id="p5">5. Опт и дилерам <span class="tag b2b">B2B</span></h2>
+  <p class="purpose">Цель: заявка на прайс / регистрация дилера. Тон — деловой, конкретика по выгоде.</p>
+  <div class="h1block"><div class="lbl">H1</div><div class="t">Пластиковые окна оптом и без монтажа в Воронеже</div></div>
+  <p><strong>Подзаголовок:</strong> Поставка ПВХ-конструкций дилерам, прорабам и строительным компаниям. Цены по объёму и условия для постоянных партнёров.</p>
+  <h4>Кому это</h4>
+  <ul>
+    <li>Оконным фирмам и салонам, которые перепродают изделия.</li>
+    <li>Строительным компаниям и подрядчикам на объектах.</li>
+    <li>Прорабам и бригадам, которые ставят сами.</li>
+  </ul>
+  <h4>Почему работать с нами</h4>
+  <ul>
+    <li>Прозрачные цены, фиксируем условия в договоре.</li>
+    <li>Скидка растёт от объёма заказа.</li>
+    <li>Выделенный менеджер на вашу компанию.</li>
+    <li>Стабильное качество и сроки — без «сюрпризов» на объекте.</li>
+  </ul>
+  <p class="need">⚑ нужны ваши данные: реальная сетка скидок по объёму, минимальная партия, сроки, есть ли отсрочка платежа, условия доставки, какие профильные системы поставляете.</p>
+  <p><span class="cta">Запросить прайс-лист</span> &nbsp; <span class="cta" style="background:var(--graph)">Стать дилером</span></p>
+  <div class="seo"><b>SEO title:</b> Окна ПВХ оптом в Воронеже — цены для дилеров и прорабов<br><b>Description:</b> Пластиковые окна оптом и без монтажа в Воронеже. Дилерские цены по объёму, условия для партнёров, прайс по запросу. ☎ 8 (473) 261-25-95</div>
+
+  <h2 id="p6">6. Прорабам и монтажным бригадам <span class="tag b2b">B2B</span></h2>
+  <div class="h1block"><div class="lbl">H1</div><div class="t">Спеццены для прорабов и монтажных бригад</div></div>
+  <p><strong>Подзаголовок:</strong> Ставите сами? Берите изделия у нас по специальной цене и с бонусом за объём.</p>
+  <h4>Текст</h4>
+  <p>Если у вас своя бригада и вы устанавливаете окна самостоятельно — мы дадим вам изделия по выгодной цене, быстрый просчёт и стабильное качество. Чем больше объём — тем интереснее условия. Никакой конкуренции за ваших клиентов: мы поставщик, монтаж и заказчик остаются за вами.</p>
+  <p class="need">⚑ нужны ваши данные: размер спеццены/бонуса для прорабов, как оформляется сотрудничество.</p>
+  <p><span class="cta">Узнать условия для прорабов</span></p>
+  <div class="seo"><b>SEO title:</b> Окна прорабам и бригадам в Воронеже — спеццены и бонусы<br><b>Description:</b> Специальные цены на пластиковые окна для прорабов и монтажных бригад в Воронеже. Бонус за объём, быстрый просчёт, стабильное качество. ☎ 8 (473) 261-25-95</div>
+
+  <h2 id="p7">7. Окна без монтажа <span class="tag bez">поставка</span></h2>
+  <div class="h1block"><div class="lbl">H1</div><div class="t">Окна по вашим размерам — без установки</div></div>
+  <p><strong>Подзаголовок:</strong> Изготовим готовые окна по вашим размерам. Заберёте сами или привезём — монтаж остаётся за вами.</p>
+  <h4>Кому подходит</h4>
+  <ul>
+    <li>Тем, кто ставит окна сам или своей бригадой.</li>
+    <li>На стройку или ремонт, где монтаж уже организован.</li>
+    <li>Тем, кто не хочет переплачивать за установку.</li>
+  </ul>
+  <h4>Как это работает</h4>
+  <ol>
+    <li>Присылаете размеры (или поможем с замером — <span class="need">⚑ платно/бесплатно — уточнить</span>).</li>
+    <li>Рассчитываем стоимость изделий и комплектующих.</li>
+    <li>Изготавливаем, вы забираете самовывозом или заказываете доставку.</li>
+  </ol>
+  <p class="need">⚑ нужны ваши данные: от какого объёма работаете без монтажа, условия и стоимость доставки, можно ли заказать одно окно.</p>
+  <p><span class="cta">Рассчитать окна без монтажа</span></p>
+  <div class="seo"><b>SEO title:</b> Окна без монтажа в Воронеже — изготовление по размерам<br><b>Description:</b> Пластиковые окна по вашим размерам без установки в Воронеже. Самовывоз или доставка, монтаж за вами. Расчёт по размерам. ☎ 8 (473) 261-25-95</div>
+
+  <h2 id="p8">8. О компании <span class="tag trust">доверие</span></h2>
+  <div class="h1block"><div class="lbl">H1</div><div class="t">О компании «Эталон Пласт»</div></div>
+  <h4>Текст</h4>
+  <p>«Эталон Пласт» занимается пластиковыми окнами в Воронеже с 2008 года. За это время нам доверили замену окон более 10 000 семей Воронежа, Воронежской и Липецкой областей, а наши работы выполнены более чем на 300 объектах муниципального, социального и частного строительства.</p>
+  <p>Мы работаем в трёх направлениях: устанавливаем окна под ключ для частных клиентов, поставляем изделия без монтажа и сотрудничаем с дилерами, прорабами и строительными компаниями. Отвечаем за качество на каждом этапе — от замера до гарантийного обслуживания.</p>
+  <p class="need">⚑ нужны ваши данные: год основания юрлица, команда, фото офиса/склада, реквизиты, сертификаты/документы, с какими брендами профиля и фурнитуры работаете.</p>
+  <div class="seo"><b>SEO title:</b> О компании Эталон Пласт — пластиковые окна в Воронеже с 2008 года<br><b>Description:</b> Эталон Пласт — окна в Воронеже с 2008 года. 10 000+ клиентов, 300+ объектов. Под ключ, опт, поставка без монтажа. ☎ 8 (473) 261-25-95</div>
+
+  <h2 id="p9">9. Рассрочка и оплата · Гарантия <span class="tag trust">доверие</span></h2>
+  <h3>Рассрочка и оплата</h3>
+  <div class="h1block"><div class="lbl">H1</div><div class="t">Окна в рассрочку 0% — без предоплаты</div></div>
+  <p>Закажите окна сегодня — платите потом. Рассрочка 0% до 200 000 ₽ на срок до 6 месяцев, без процентов и переплат. Первый взнос — 0%.</p>
+  <ul><li>Рассрочка или кредит</li><li>Переплата при рассрочке — 0%</li><li>Первый взнос по кредиту — 0%</li></ul>
+  <p class="need">⚑ нужны ваши данные: банки-партнёры, актуальные условия рассрочки/кредита, документы.</p>
+  <h3>Гарантия</h3>
+  <p>Даём гарантию на изделия и монтаж. <span class="need">⚑ срок и условия гарантии — уточнить</span>. Гарантийное и сервисное обслуживание.</p>
+  <div class="seo"><b>SEO title:</b> Окна в рассрочку 0% в Воронеже — без предоплаты<br><b>Description:</b> Пластиковые окна в рассрочку 0% в Воронеже: до 200 000 ₽ на 6 месяцев, первый взнос 0%, без переплат. ☎ 8 (473) 261-25-95</div>
+
+  <h2 id="p10">10. Отзывы · Наши работы · Контакты <span class="tag trust">доверие</span></h2>
+  <h3>Отзывы (5 реальных, со старого сайта)</h3>
+  <ul>
+    <li><strong>Ольга, врач:</strong> благодарность монтажникам за качество и сотруднице Свете за оперативность; высокое качество по привлекательной цене.</li>
+    <li><strong>Татьяна, воспитатель:</strong> ставили окна впервые после покупки квартиры — быстро, чисто, вежливые специалисты.</li>
+    <li><strong>Александр, водитель:</strong> остекление лоджии, работа профессионалов; благодарность монтажнику Сергею Шамшиеву.</li>
+    <li><strong>Оксана, домохозяйка:</strong> поставили два окна, очень довольны; благодарность мастеру по откосам Евгению.</li>
+    <li><strong>Виктор, менеджер:</strong> замерщик Руслан посоветовал широкий профиль и спец-стеклопакет — довольны микроклиматом.</li>
+  </ul>
+  <p class="need">⚑ усилить: ссылки на отзывы в Яндекс/2ГИС, видео-отзывы, свежие отзывы с фото.</p>
+  <h3>Наши работы (портфолио)</h3>
+  <p>Галерея реальных объектов: квартиры, дома, балконы; по возможности — «до/после». <span class="need">⚑ нужны ваши фото объектов</span>.</p>
+  <h3>Контакты</h3>
+  <p>Телефоны: 8 (473) 261-25-95, 261-25-96 · E-mail: admin@окна-в-воронеже.рф · Адрес: г. Воронеж, Ленинский проспект, 20/1 · карта (Яндекс) · часы работы <span class="need">⚑ уточнить</span> · форма обратной связи · ссылки на соцсети.</p>
+
+  <h2 id="p11">11. Блог: темы и пример статьи</h2>
+  <h4>Темы под SEO (по этапам пути клиента)</h4>
+  <table>
+    <tr><th>Тема статьи</th><th>Запрос / польза</th></tr>
+    <tr><td>Почему потеют пластиковые окна и как это исправить</td><td>«почему потеют окна» — частый вопрос, ведёт на тёплые стеклопакеты</td></tr>
+    <tr><td>2 или 3 стекла: какой стеклопакет выбрать</td><td>сравнение, помощь в выборе</td></tr>
+    <tr><td>Профиль 58 или 70 мм: в чём разница</td><td>сравнение профилей</td></tr>
+    <tr><td>Как принять окна у монтажников: чек-лист</td><td>лид-магнит, доверие</td></tr>
+    <tr><td>Ламинация под дерево: какие бывают цвета</td><td>визуальная статья + конфигуратор</td></tr>
+    <tr><td>Как выбрать окна для частного дома</td><td>гайд на этапе рассмотрения</td></tr>
+    <tr><td>Тёплое или холодное остекление балкона</td><td>сравнение, ведёт на /balkony</td></tr>
+    <tr><td>Сколько стоит остеклить квартиру в Воронеже</td><td>коммерческий, с калькулятором</td></tr>
+  </table>
+  <h4>Пример мини-статьи: «Почему потеют пластиковые окна»</h4>
+  <p><strong>Лид:</strong> Конденсат на окнах — частая жалоба после установки. Разберём, почему он появляется и что с этим делать.</p>
+  <p><strong>Причины:</strong> повышенная влажность в квартире, слабая вентиляция, широкий подоконник перекрывает поток тёплого воздуха от батареи, однокамерный стеклопакет на холодной стороне.</p>
+  <p><strong>Решения:</strong> регулярное проветривание или микропроветривание, не заставлять подоконник, при заказе — выбрать тёплый многокамерный стеклопакет (особенно для северной стороны). Если окна уже стоят — поможем подобрать режим или модернизировать.</p>
+  <p><strong>CTA:</strong> «Не уверены, какой стеклопакет нужен? Закажите бесплатный замер — инженер подскажет на месте.» <span class="cta">Вызвать замерщика</span></p>
+
+  <hr>
+  <p class="purpose">Документ-наполнение, 16.06.2026. Все цифры и факты — подтверждённые из исходных материалов; пометки <span class="need">⚑</span> ждут ваших данных, чтобы заменить общие формулировки на конкретику (цены, профили, сроки, гарантия, условия для дилеров).</p>
+
+</div>
+</body>
+</html>
